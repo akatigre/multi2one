@@ -6,7 +6,7 @@ This repository contains the source code for the ICLR'2023 paper **Learning Inpu
 
 Here we show several examples of the text-guided manipulation. The first column is the original image to be manipulated, second is the manipulation result of StyleCLIP and the last column is of our method, Multi2One.
 
-![Screenshot](teaser.gif)
+![Screenshot](logs/teaser.gif)
 
 ---
 ### Installation
