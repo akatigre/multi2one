@@ -1,0 +1,4 @@
+stylespace/**
+Pretrained/**
+**/__pycache__/**
+**/*.pt

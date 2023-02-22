@@ -1,0 +1,77 @@
+ffhq_params:
+  dataset: 'ffhq'
+  targets : [
+              'Little mermaid', 'Green hair',
+              'Blue hair', 'Joker smile', 
+              'Pink hair', 'Man with long hair',
+            ]
+  stylegan_size: 1024
+  stylespace_path: './dictionary/ffhq/'
+  stylegan_ckpt: './Pretrained/stylegan2/ffhq.pt'
+  latent_path: 'latents/ffhq/test_faces.pt'
+  ir_se50_weights: ./Pretrained/model_ir_se50.pth
+  alpha: 10
+  topk: 100
+
+afhqcat_params:
+  dataset: 'afhqcat'
+  targets : [
+              'Bengal cat', 'Black cat',
+              'Sleepy cat', 'Kitten',
+              'Surprised cat', 'Cat under sunlight'
+            ]
+  stylegan_size: 512
+  stylespace_path: './dictionary/afhqcat/'
+  stylegan_ckpt: './Pretrained/stylegan2/afhqcat.pt'
+  latent_path: 'latents/afhqcat/test_faces.pt'
+  ir_se50_weights: ./Pretrained/model_ir_se50.pth
+  alpha: 10
+  topk: 50
+
+afhqdog_params:
+  dataset: 'afhqdog'
+  targets : [
+              'Black fur', 'Blue fur',
+              'Corgi', 'Golden Retriever',
+              'Maltese', 'Doberman'
+
+            ]
+  stylegan_size: 512
+  stylespace_path: './dictionary/afhqdog/'
+  stylegan_ckpt: './Pretrained/stylegan2/afhqdog.pt'
+  latent_path: 'latents/afhqdog/test_faces.pt'
+  ir_se50_weights: ./Pretrained/model_ir_se50.pth
+  alpha: 10
+  topk: 200
+
+
+car_params:
+  dataset: 'car'
+  targets : [
+              'Benz G-wagon', 'Yellow cab',
+              'White sports car', 'Red beetle car', 
+              'SUV car', 'Super car'
+            ]
+  stylegan_size: 512
+  stylespace_path: './dictionary/car/'
+  stylegan_ckpt: './Pretrained/stylegan2/car.pt'
+  latent_path: 'latents/car/test_faces.pt'
+  ir_se50_weights: ./Pretrained/model_ir_se50.pth
+  alpha: 10
+  topk: 100
+
+
+church_params:
+  dataset: 'church'
+  targets : [
+              'Brick church', 'Golden church',
+              'Medieval church', 'Church at sunset',
+              'Modern church', 'Church in winter'
+            ]
+  stylegan_size: 256
+  stylespace_path: './dictionary/church/'
+  stylegan_ckpt: './Pretrained/stylegan2/church.pt'
+  latent_path: 'latents/church/test_faces.pt'
+  ir_se50_weights: ./Pretrained/model_ir_se50.pth
+  alpha: 10
+  topk: 30
