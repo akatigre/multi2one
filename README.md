@@ -11,14 +11,11 @@
 > **Abstract**: <br>
 With the advantages of fast inference and human-friendly flexible manipulation, image-agnostic style manipulation via text guidance enables new applications that were not previously available. The state-of-the-art text-guided image-agnostic manipulation method embeds the representation of each channel of StyleGAN independently in the Contrastive Language-Image Pre-training (CLIP) space, and provides it in the form of a Dictionary to quickly find out the channel-wise manipulation direction during inference time. However, in this paper we argue that this dictionary which is constructed by controlling single channel individually is limited to accommodate the versatility of text guidance since the collective and interactive relation among multiple channels are not considered. Indeed, we show that it fails to discover a large portion of manipulation directions that can be found by existing methods, which manually manipulates latent space without texts. To alleviate this issue, we propose a novel method that **learns a Dictionary**, whose entry corresponds to the representation of a single channel, by taking into account the manipulation effect coming from the interaction with multiple other channels. We demonstrate that our strategy resolves the inability of previous methods in finding diverse known directions from unsupervised methods and unknown directions from random text while maintaining the real-time inference speed and disentanglement ability.
 
-<<<<<<< HEAD
 <br><br>
-=======
-![Screenshot](logs/teaser.gif)
->>>>>>> e4ff2842d2846548b74224d3bc51605f4b5ae697
+
 
 ## Manipulation Examples
----
+
 Here we show several examples of the text-guided manipulation. The first column is the original image to be manipulated, second is the manipulation result of StyleCLIP and the last column is of our method, Multi2One.
 
 
@@ -29,7 +26,7 @@ Here we show several examples of the text-guided manipulation. The first column 
 <br><br>
 
 ## Setup
----
+
 We support ```python3```. To install the dependencies run:
 
 ```bash
@@ -62,7 +59,7 @@ We use the files `fs3.npy` provided by [StyleCLIP official github](https://githu
 For manipulation purpose, we provide a single inverted code (`latent.pt`) of real image for Human face domain (FFHQ). For inversion, we follow StyleCLIP which relies on [e4e](https://arxiv.org/abs/2102.02766). Please refer to [e4e-github](https://github.com/omertov/encoder4editing) to manipulate real images by inverting them into W space of pretrained StyleGAN.
 
 ## Image Manipulation
----
+
 To generate more samples of text-driven manipulation, run 
 
 ```python
@@ -85,7 +82,7 @@ See the file to get the details of the manipulation parameters.
 <br><br>
 
 ## Learning Dictionary
----
+
 Though we provide the dictionary learned from the pair of unsupervised directions and their CLIP representations, for those who want to reproduce the dictionary learning process from scratch, we demonstrate the process below.
 
 ### Train a dictionary using unsupervised directions
