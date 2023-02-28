@@ -1,4 +1,4 @@
-stylespace/**
-Pretrained/**
+stylespace
+Pretrained
+precomputed_pairs
 **/__pycache__/**
-**/*.pt

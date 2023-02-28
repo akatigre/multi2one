@@ -11,7 +11,7 @@ from manipulation_model import GlobalDirection
 import argparse
 from matplotlib import pyplot as plt
 
-
+from torchvision.utils import save_image
 
 def convert(img, target_type_min, target_type_max, target_type):
     imin = img.min()
@@ -48,6 +48,7 @@ def manipulate(target, latent):
         with torch.no_grad():
             styleclip_output = manip_single_pair(model, t, 'single')
             multi2one_output = manip_single_pair(model, t, 'multi')
+            
             imgs = [model.img_orig.detach().cpu(), styleclip_output['manipulated_image'], multi2one_output['manipulated_image']]
         manip_img = torch.cat(imgs, dim=-1).squeeze(0).permute(1, 2, 0)
         all_images.append(np.asarray(manip_img))
@@ -76,6 +77,15 @@ if __name__=="__main__":
     parser = argparse.ArgumentParser(description='Configuration for styleCLIP Global Direction with our method')
     parser.add_argument("--dataset", type=str, default="ffhq",    choices=['ffhq', 'afhqcat', 'afhqdog', 'car', 'church'],  help="name of stylegan pretrained dataset")
     args = parser.parse_args()
+
+    # https://drive.google.com/uc?
+
+    if not os.path.exists('Pretrained'):
+        import gdown
+        zipfile_path = 'https://drive.google.com/uc?export=download&id=1wkCJxUf7YD-ov70DCZaN8GRUoKsKZJOs'
+        output_name = 'multi2one.zip'
+        gdown.download(zipfile_path, output_name, quiet=False)
+        os.system(f'unzip {output_name}; rm {output_name}; mv tmp/* .; rm -r tmp')
 
     with open('config.yaml', "r") as f:
         config = yaml.safe_load(f)

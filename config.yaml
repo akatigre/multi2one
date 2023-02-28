@@ -1,3 +1,4 @@
+
 ffhq_params:
   dataset: 'ffhq'
   targets : [
@@ -35,14 +36,14 @@ afhqdog_params:
               'Corgi', 'Golden Retriever',
               'Maltese', 'Doberman'
 
-            ]
-  stylegan_size: 512
-  stylespace_path: './dictionary/afhqdog/'
-  stylegan_ckpt: './Pretrained/stylegan2/afhqdog.pt'
-  latent_path: 'latents/afhqdog/test_faces.pt'
-  ir_se50_weights: ./Pretrained/model_ir_se50.pth
-  alpha: 10
-  topk: 200
+          ]
+stylegan_size: 512
+stylespace_path: './dictionary/afhqdog/'
+stylegan_ckpt: './Pretrained/stylegan2/afhqdog.pt'
+latent_path: 'latents/afhqdog/test_faces.pt'
+ir_se50_weights: ./Pretrained/model_ir_se50.pth
+alpha: 10
+topk: 200
 
 
 car_params:
