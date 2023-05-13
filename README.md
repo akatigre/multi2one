@@ -103,3 +103,12 @@ Under precomputed_pairs, the pairs of unsupervsed directions and their CLIP repr
 
 ## Acknowledgment
 This code is mainly built upon [StyleCLIP Global Direction](https://github.com/orpatashnik/StyleCLIP/tree/main/global_directions) and [Rosinality pytorch implementation of StyleGAN](https://github.com/rosinality/stylegan2-pytorch/).
+
+## Citation
+
+> @inproceedings{kim2023learning, <br>
+> title={Learning Input-agnostic Manipulation Directions in StyleGAN with Text Guidance}, <br>
+> author={Kim, Yoonjeon and Kim, Hyunsu and Kim, Junho and Choi, Yunjey and Yang, Eunho}, <br>
+> booktitle={The Eleventh International Conference on Learning Representations}, <br>
+> year={2023}
+}
